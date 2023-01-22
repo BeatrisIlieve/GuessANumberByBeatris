@@ -9,7 +9,7 @@ import random
 my_list = ['Welcome', 'to', 'guess', 'a', 'number', 'game', '!\n']
 for starting_index in range(len(my_list), -1, -1):
     if starting_index == 0:
-        my_list.insert(starting_index, f"{Fore.LIGHTCYAN_EX}{Style.BRIGHT}")
+        my_list.insert(starting_index, f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}")
     elif starting_index % 2 == 0:
         my_list.insert(starting_index, f"{Fore.LIGHTMAGENTA_EX}{Style.BRIGHT}")
     elif starting_index % 3 == 0:
@@ -41,15 +41,15 @@ while True:
         computer_number = random.randint((levels_counter + 1), (100 * (levels_counter + 1)))
 
     # printing the current level number and the number of choices the user has to guess the number
-    print(f"{Style.BRIGHT}{Fore.BLUE}LEVEL {Fore.MAGENTA}{levels_counter + 1}\n"
-          f"\n{Fore.CYAN}You have {Fore.MAGENTA}{max_attempts} {Fore.CYAN}"
-          f"chances to guess a number between {Fore.MAGENTA}{lowest_number}{Fore.CYAN} "
-          f"and {Fore.MAGENTA}{highest_number}!\n")
+    print(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}LEVEL {Fore.LIGHTMAGENTA_EX}{levels_counter + 1}\n"
+          f"\n{Fore.LIGHTCYAN_EX}You have {Fore.LIGHTMAGENTA_EX}{max_attempts} {Fore.LIGHTCYAN_EX}"
+          f"chances to guess a number between {Fore.LIGHTMAGENTA_EX}{lowest_number}{Fore.LIGHTCYAN_EX} "
+          f"and {Fore.LIGHTMAGENTA_EX}{highest_number}!\n")
 
     # for cycle runs until it reaches the number of maximum attempts
     for current_attempt in range(1, max_attempts + 1):
         # taking user input
-        player_input = input(f"{Fore.CYAN}{Style.NORMAL}Guess the number: ")
+        player_input = input(f"{Fore.WHITE}{Style.NORMAL}Guess the number: ")
         # case of invalid input
         if not player_input.isdigit():
             print(f"{Fore.RED}Not a number or a negative number. Try again...")
@@ -74,7 +74,7 @@ while True:
                     print(f"{Fore.RED}Too Low!")
             # by comparing the current lowest and highest number, we help the user to keep track what numbers
             # they have already chosen, and in what range the computer number is, respectively
-            print(f"{Fore.MAGENTA}Number is between {lowest_number} and {highest_number}")
+            print(f"{Fore.LIGHTMAGENTA_EX}Number is between {lowest_number} and {highest_number}")
 
             # the initial number of max attempts a user can make is 7; if a user reaches the number of max attempt,
             # they loses the game; however in case both current lowest and higher numbers -/+ 1 are equal
@@ -84,8 +84,8 @@ while True:
                 if (lowest_number + 1 == computer_number and highest_number - 1 == computer_number) or\
                         (lowest_number + 1 == computer_number and highest_number - 1 == computer_number):
 
-                    bonus_number = input(f"{Style.BRIGHT}{Fore.WHITE}Since you are very close, you get one extra "
-                                         f"chance to guess the number! Guess the number: ")
+                    bonus_number = input(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}Since you are very close, you get an"
+                                         f" extra chance to guess the number! Guess the number: ")
                     bonus_number = int(bonus_number)
                     if bonus_number == computer_number:
                         current_attempt += 1
@@ -110,9 +110,10 @@ while True:
                 attempts_in_ordinal_number = "seventh"
             else:
                 attempts_in_ordinal_number = "eight"
-            print(f"\n{Style.BRIGHT}{Fore.GREEN}G{Fore.MAGENTA}r{Fore.YELLOW}e{Fore.BLUE}a{Fore.CYAN}t{Fore.MAGENTA}!"
-                  f"{Fore.GREEN}You guessed it on the {Fore.MAGENTA}{attempts_in_ordinal_number} "
-                  f"{Fore.GREEN}attempt!\n")
+            print(f"\n{Style.BRIGHT}{Fore.LIGHTGREEN_EX}G{Fore.LIGHTMAGENTA_EX}r{Fore.LIGHTYELLOW_EX}e"
+                  f"{Fore.LIGHTBLUE_EX}a{Fore.LIGHTCYAN_EX}t{Fore.LIGHTMAGENTA_EX}!"
+                  f"{Fore.LIGHTGREEN_EX}You guessed it on the {Fore.LIGHTMAGENTA_EX}{attempts_in_ordinal_number} "
+                  f"{Fore.LIGHTGREEN_EX}attempt!\n")
             # increasing the level number
             levels_counter += 1
             # if level number becomes five, then the user has completed all five levels and won the game
@@ -130,10 +131,10 @@ while True:
     # if a user has reached the maximum attempts number or has won the game they are given an option to restart the game
     if win_condition or max_attempts_condition:
         if win_condition:
-            print(f"{Fore.GREEN}{Style.BRIGHT}Congratulations, You Won!")
+            print(f"{Fore.LIGHTGREEN_EX}{Style.BRIGHT}Congratulations, You Won!")
         else:
             print(f"{Fore.RED}You have reached the maximum attempts! "
-                  f"Computer number is {Fore.MAGENTA}{computer_number}")
+                  f"Computer number is {Fore.LIGHTRED_EX}{computer_number}")
         # option to restart the game
         play_again = input(f"\n{Fore.CYAN}If you want to play again enter {Fore.WHITE}[y]{Fore.CYAN} "
                            f"if not enter {Fore.WHITE}[n]{Fore.CYAN}: \n")
@@ -152,5 +153,3 @@ while True:
             break
         else:
             raise SystemExit(f'{Fore.RED}Invalid input.')
-
-
