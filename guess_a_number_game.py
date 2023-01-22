@@ -139,8 +139,8 @@ while True:
             print(f"{Fore.RED}You have reached the maximum attempts! "
                   f"Computer number is {Fore.LIGHTRED_EX}{computer_number}")
         # option to restart the game
-        play_again = input(f"\n{Fore.CYAN}If you want to play again enter {Fore.WHITE}[y]{Fore.CYAN} "
-                           f"if not enter {Fore.WHITE}[n]{Fore.CYAN}: \n")
+        play_again = input(f"\n{Fore.LIGHTYELLOW_EX}If you want to play again enter {Fore.WHITE}[y]"
+                           f"{Fore.LIGHTYELLOW_EX} if not enter {Fore.WHITE}[n]{Fore.LIGHTYELLOW_EX}: \n")
         # if a user choose to play again, the auxiliary variables are returned to their original values
         if play_again == 'y':
             win_condition = False
