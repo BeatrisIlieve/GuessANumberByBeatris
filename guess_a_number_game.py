@@ -86,8 +86,8 @@ while True:
                 if (lowest_number + 1 == computer_number and highest_number - 1 == computer_number) or\
                         (lowest_number + 1 == computer_number and highest_number - 1 == computer_number):
 
-                    bonus_number = input(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}Since you are very close,\n you get an "
-                                         f"extra chance to guess the number!\n Guess the number: ")
+                    bonus_number = input(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}Since you are very close,\nyou get an "
+                                         f"extra chance to guess the number!\nGuess the number: ")
                     bonus_number = int(bonus_number)
                     if bonus_number == computer_number:
                         current_attempt += 1
