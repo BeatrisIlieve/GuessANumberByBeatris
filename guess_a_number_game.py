@@ -86,8 +86,8 @@ while True:
                 if (lowest_number + 1 == computer_number and highest_number - 1 == computer_number) or\
                         (lowest_number + 1 == computer_number and highest_number - 1 == computer_number):
 
-                    bonus_number = input(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}Since you are very close, you get an "
-                                         f"extra chance to guess the number! Guess the number: ")
+                    bonus_number = input(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}Since you are very close,\n you get an "
+                                         f"extra chance to guess the number!\n Guess the number: ")
                     bonus_number = int(bonus_number)
                     if bonus_number == computer_number:
                         current_attempt += 1
@@ -114,7 +114,7 @@ while True:
                 attempts_in_ordinal_number = "8th"
             print(f"\n{Style.BRIGHT}{Fore.LIGHTGREEN_EX}G{Fore.LIGHTMAGENTA_EX}r{Fore.LIGHTYELLOW_EX}e"
                   f"{Fore.LIGHTBLUE_EX}a{Fore.LIGHTCYAN_EX}t{Fore.LIGHTMAGENTA_EX}!"
-                  f"{Fore.LIGHTGREEN_EX}You guessed it on the {Fore.LIGHTMAGENTA_EX}{attempts_in_ordinal_number} "
+                  f"{Fore.LIGHTGREEN_EX} You guessed it on the {Fore.LIGHTMAGENTA_EX}{attempts_in_ordinal_number} "
                   f"{Fore.LIGHTGREEN_EX}attempt!\n")
             # increasing the level number
             levels_counter += 1
