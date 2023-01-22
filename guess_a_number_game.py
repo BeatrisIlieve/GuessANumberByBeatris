@@ -6,7 +6,7 @@ from colorama import Fore, Style
 import random
 
 # welcoming the user
-my_list = ['Welcome', 'to', 'guess', 'a', 'number', 'game', '!\n']
+my_list = ['Welcome', 'to', 'Guess', 'A', 'Number', 'Game', '!\n']
 for starting_index in range(len(my_list), -1, -1):
     if starting_index == 0:
         my_list.insert(starting_index, f"{Fore.LIGHTBLUE_EX}{Style.BRIGHT}")
@@ -18,7 +18,9 @@ for starting_index in range(len(my_list), -1, -1):
         my_list.insert(starting_index, f"{Fore.LIGHTBLUE_EX}")
     else:
         my_list.insert(starting_index, f"{Fore.LIGHTYELLOW_EX}")
-print(" ".join(my_list))
+print(f"{' ' * 8}", end ="")
+print(" ".join(my_list), end ="")
+print(f"{' ' * 8}")
 
 # auxiliary variables
 win_condition = False
@@ -84,8 +86,8 @@ while True:
                 if (lowest_number + 1 == computer_number and highest_number - 1 == computer_number) or\
                         (lowest_number + 1 == computer_number and highest_number - 1 == computer_number):
 
-                    bonus_number = input(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}Since you are very close, you get an"
-                                         f" extra chance to guess the number! Guess the number: ")
+                    bonus_number = input(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}Since you are very close, you get an "
+                                         f"extra chance to guess the number! Guess the number: ")
                     bonus_number = int(bonus_number)
                     if bonus_number == computer_number:
                         current_attempt += 1
@@ -95,21 +97,21 @@ while True:
         # case of guessed number
         if player_number == computer_number or bonus_number == computer_number:
             if current_attempt == 1:
-                attempts_in_ordinal_number = "first"
+                attempts_in_ordinal_number = "1st"
             elif current_attempt == 2:
-                attempts_in_ordinal_number = "second"
+                attempts_in_ordinal_number = "2nd"
             elif current_attempt == 3:
-                attempts_in_ordinal_number = "third"
+                attempts_in_ordinal_number = "3rd"
             elif current_attempt == 4:
-                attempts_in_ordinal_number = "fourth"
+                attempts_in_ordinal_number = "4th"
             elif current_attempt == 5:
-                attempts_in_ordinal_number = "fifth"
+                attempts_in_ordinal_number = "5th"
             elif current_attempt == 6:
-                attempts_in_ordinal_number = "sixth"
+                attempts_in_ordinal_number = "6th"
             elif current_attempt == 7:
-                attempts_in_ordinal_number = "seventh"
+                attempts_in_ordinal_number = "7th"
             else:
-                attempts_in_ordinal_number = "eight"
+                attempts_in_ordinal_number = "8th"
             print(f"\n{Style.BRIGHT}{Fore.LIGHTGREEN_EX}G{Fore.LIGHTMAGENTA_EX}r{Fore.LIGHTYELLOW_EX}e"
                   f"{Fore.LIGHTBLUE_EX}a{Fore.LIGHTCYAN_EX}t{Fore.LIGHTMAGENTA_EX}!"
                   f"{Fore.LIGHTGREEN_EX}You guessed it on the {Fore.LIGHTMAGENTA_EX}{attempts_in_ordinal_number} "
