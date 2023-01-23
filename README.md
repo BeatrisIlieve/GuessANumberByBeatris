@@ -13,7 +13,7 @@
 #### - Initially the lowest number represents the lowest number in the range of the computer choice and vice versa. However, if the player has chosen a number that is different from the number of the computer and that number is higher than the lowest number or lower than the highest number, each of both values acquires user's choice
 ####    *(for example at the beginning of the game, the lowest number = 1 and the highest number = 100, in this case, if computer number is equal to 50, and the user has chosen 30 and 70, then the lowest number becomes 30 and the highest becomes 70. In this way, by comparing the current lowest and highest number, we help the user to keep track what numbers he/she has already chosen, and in what range the computer number is, respectively)*;
 #### - If a player has reached the number of maximum attempts, but both current lowest and highest numbers -/+ 1 are equal to the computer number, then the player is given one more chance to guess the number 
-####    *(as for example in the screenshot bewol, where the computer number is 366 and the user has previosly chosen 367 and on the last attempt 365)*;
+####    *(as for example on the third screenshot bewol, where the computer number is 366 and the user has previosly chosen 367 and on the last attempt 365)*;
 #### - Finally, if a player has reached the number of maximum attempts or has won the game, he/she may restart the game
 ## Screenshots:
 <img width="461" alt="Screenshot 2023-01-23 at 16 24 23" src="https://user-images.githubusercontent.com/122045435/214063729-2d20ca73-30fa-48a7-a25b-82c568b0903d.png">
