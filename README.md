@@ -16,6 +16,7 @@
 #####    *(for example, if the computer number is 50 and the user has already chosen 49 and 51)*;
 #### - Finally, if a player has reached the number of maximum attempts or has won the game, he/she may restart the game
 ## Screenshots:
-<img width="455" alt="Screenshot 2023-01-22 at 19 50 18" src="https://user-images.githubusercontent.com/122045435/214048564-7f626f99-d9e6-4289-ad83-6178a15dc791.png">
+<img width="461" alt="Screenshot 2023-01-23 at 16 24 23" src="https://user-images.githubusercontent.com/122045435/214063729-2d20ca73-30fa-48a7-a25b-82c568b0903d.png">
 <img width="501" alt="Screenshot 2023-01-23 at 15 33 22" src="https://user-images.githubusercontent.com/122045435/214052602-b19779e5-61a2-4c1c-ae90-714427613aa1.png">
-
+<img width="449" alt="Screenshot 2023-01-23 at 17 13 06" src="https://user-images.githubusercontent.com/122045435/214075946-0e48ea97-82b3-41df-95ef-ae9dae9d5f94.png">
+## You can play the game directly in your browser [HERE](https://replit.com/@BeatrisIlieve/GuessANumberByBeatris#main.py)
