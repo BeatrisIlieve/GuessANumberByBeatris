@@ -8,7 +8,7 @@
 #### - If the number of maximum attempts is reached, the player loses the game;
 #### - If a player completes the 5th level, he/she wins;
 ## Key Features:
-#### - Initially the lowest number represents the lowest number in the range of the computer choice and vice versa. However, if the player has chosen a number that is different from the number of the computer and that number is higher than the lowest number or lower than the highest number, each of both values acquire user's choice. For example at the beginning of the game, the lowest number = 1 and the highest number = 100, in this case, if computer number is equal to 50, and the user has chosen 30 and 70, then the lowest number becomes 30 and the highest becomes 70. In this way, by comparing the current lowest and highest number, we help the user to keep track what numbers he/she have already chosen, and in what range the computer number is, respectively;
+#### - Initially the lowest number represents the lowest number in the range of the computer choice and vice versa. However, if the player has chosen a number that is different from the number of the computer and that number is higher than the lowest number or lower than the highest number, each of both values acquires user's choice. For example at the beginning of the game, the lowest number = 1 and the highest number = 100, in this case, if computer number is equal to 50, and the user has chosen 30 and 70, then the lowest number becomes 30 and the highest becomes 70. In this way, by comparing the current lowest and highest number, we help the user to keep track what numbers he/she have already chosen, and in what range the computer number is, respectively;
 
 
 
