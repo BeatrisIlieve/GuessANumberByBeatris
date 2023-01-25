@@ -42,7 +42,7 @@ while True:
     else:
         computer_number = random.randint((levels_counter + 1), (100 * (levels_counter + 1)))
 
-    # printing the current level number and the number of choices the user has to guess the number
+    # printing the current level number and the number of maximum attempts the user has to guess the number
     print(f"{Style.BRIGHT}{Fore.LIGHTCYAN_EX}LEVEL {Fore.LIGHTMAGENTA_EX}{levels_counter + 1}\n"
           f"\n{Fore.LIGHTCYAN_EX}You have {Fore.LIGHTMAGENTA_EX}{max_attempts} {Fore.LIGHTCYAN_EX}"
           f"chances to guess a number between {Fore.LIGHTMAGENTA_EX}{lowest_number}{Fore.LIGHTCYAN_EX} "
@@ -59,12 +59,7 @@ while True:
         # player's number as integer
         player_number = int(player_input)
 
-        # initially the lowest number represents the lowest number in the range of the computer choice and vice versa;
-        # although if user's number is higher than the lowest number or user's number is lower than the highest number
-        # and the user's number is different from the number of the computer, both values acquire user's choice;
-        # for example at the beginning of the game, the lowest number = 1 and the highest number = 100, in this case,
-        # if computer number is equal to 50, and the user has chosen 30 and 70,
-        # then the lowest number = 30 and the highest = 70
+        # the values of both highest and lowest numbers are changing accordingly to the user's input
         if player_number > computer_number or player_number < computer_number:
             if player_number > computer_number:
                 if player_number < highest_number:
@@ -74,14 +69,11 @@ while True:
                 if player_number > lowest_number:
                     lowest_number = player_number
                     print(f"{Fore.RED}Too Low!")
-            # by comparing the current lowest and highest number, we help the user to keep track what numbers
-            # they have already chosen, and in what range the computer number is, respectively
             print(f"{Fore.LIGHTMAGENTA_EX}Number is between {lowest_number} and {highest_number}")
 
             # the initial number of max attempts a user can make is 7; if a user reaches the number of max attempt,
-            # they loses the game; however in case both current lowest and higher numbers -/+ 1 are equal
+            # they loses the game; however in case both current lowest and highest numbers -/+ 1 are equal
             # to the computer number, then the user is given one more chance to guess the number
-            # (for example, if the computer number is 50 and the user has already chosen 49 and 51)
             if current_attempt == max_attempts:
                 if (lowest_number + 1 == computer_number and highest_number - 1 == computer_number) or\
                         (lowest_number + 1 == computer_number and highest_number - 1 == computer_number):
