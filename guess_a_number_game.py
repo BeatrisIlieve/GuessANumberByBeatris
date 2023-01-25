@@ -71,7 +71,7 @@ while True:
                     print(f"{Fore.RED}Too Low!")
             print(f"{Fore.LIGHTMAGENTA_EX}Number is between {lowest_number} and {highest_number}")
 
-            # the initial number of max attempts a user can make is 7; if a user reaches the number of max attempt,
+            # if a user reaches the number of max attempt,
             # they loses the game; however in case both current lowest and highest numbers -/+ 1 are equal
             # to the computer number, then the user is given one more chance to guess the number
             if current_attempt == max_attempts:
