@@ -121,7 +121,7 @@ while True:
                 # the highest and lowest numbers increase accordingly to the range of the computer choice
                 highest_number = 100 * (levels_counter + 1)
                 lowest_number = levels_counter + 1
-                break # breaking the for cycle and starting counting max attempts again
+                break # breaking the for cycle
 
     # if a user has reached the maximum attempts number or has won the game they are given an option to restart the game
     if win_condition or max_attempts_condition:
